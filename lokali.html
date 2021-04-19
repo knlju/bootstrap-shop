@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prodavnica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* iz dokumentacije za .fixed-top : dodajemo 70px padding na body */
+
+    body {
+      padding-top: 70px;
+    }
+
+    .main-presentation {
+      background-image: url(img/main.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 576px;
+    }
+
+    .ok {
+      width: 20px;
+      height: 20px;
+    }
+
+    footer {
+      height: 50px;
+    }
+
+    iframe {
+      height: 620px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar bg-dark navbar-dark fixed-top navbar-expand-md">
+    <!-- navbar -->
+    <div class="container">
+      <a class="nav-link navbar-brand" href="index.html">Brend prodavnice</a>
+
+      <button class="navbar-toggler" data-target="#navbar" data-toggle="collapse" role="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse justify-content-end container" id="navbar">
+
+        <ul class="nav navbar-nav text-center">
+
+          <form class="form-inline d-md-none d-lg-inline mt-1 mt-md-0" action="ponuda.html">
+            <input class="form-control col-8 col-md-9" placeholder="Pretrazi ponudu">
+            <button class="btn btn-dark col-4 col-md-3" type="submit">Pretrazi</button>
+          </form>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+            Pocetna
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ponuda.html">
+            Ponuda
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galerija.html">
+            Galerija
+          </a>
+          </li>
+          <li class="nav-item dropdown">
+            <span class="navbar-text dropdown-toggle active" data-toggle="dropdown" role="button">Lokali</span>
+            <ul class="dropdown-menu text-center">
+              <li class="dropdown-item dropdown-header">
+                Berane
+              </li>
+              <li class="dropdown-item">
+                <a href="lokali.html">
+                Berankrs
+              </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">
+            Kontakt
+          </a>
+            <span class="caret"></span>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- main content -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16544.921501954348!2d19.854821613189173!3d42.856873474017384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135293e506b98365%3A0x40371955773c10a0!2z0JHQtdGA0LDQvS3QutGA0Yg!5e0!3m2!1ssr!2srs!4v1525011546966"
+            class="w-100" frameborder="0" style="border:0" allowfullscreen>
+          </iframe>
+        </div>
+        <div class="col-lg-6 bordered rounded">
+          Adresa: yolo@abc.srb<br /> Telefon: 068/555-333
+          <hr /> Pravan lica: Borislav Zezelj<br /> Telefon: 12-10=x
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="img/berankrs.jpeg" class="img-thumbnail w-100" />
+    </div>
+
+  </div>
+
+  <footer class="footer border">
+    <div class="container pt-2 pr-1 text-muted">
+      Prodavnica company
+      <span class="d-none d-md-inline">insert special character for copyright here </span>&copy;
+    </div>
+
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js">
+
+
+  </script>
+  <!-- Include all compiled plugins -->
+  <script src="js/bootstrap.min.js">
+
+
+  </script>
+  <script>
+    // za skrolovanje linkom
+
+    $('a[href*=#]').click(function(event) {
+
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+
+      //prevent default
+
+      return false;
+    });
+
+    // iz dokumentacije za clickable-row
+
+    $(function($) {
+      $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+      });
+    });
+
+  </script>
+</body>
+
+</html>

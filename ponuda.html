@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prodavnica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* iz dokumentacije za .fixed-top : dodajemo 70px padding na body */
+
+    body {
+      padding-top: 70px;
+    }
+
+    .main-presentation {
+      background-image: url(img/main.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 576px;
+    }
+
+    .ok {
+      width: 20px;
+      height: 20px;
+    }
+
+    footer {
+      height: 50px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar bg-dark navbar-dark fixed-top navbar-expand-md">
+    <!-- navbar -->
+    <div class="container">
+      <a class="nav-link navbar-brand" href="index.html">Brend prodavnice</a>
+
+      <button class="navbar-toggler" data-target="#navbar" data-toggle="collapse" role="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse justify-content-end container" id="navbar">
+
+        <ul class="nav navbar-nav text-center">
+
+          <form class="form-inline d-md-none d-lg-inline mt-1 mt-md-0" action="ponuda.html">
+            <input class="form-control col-8 col-md-9" placeholder="Pretrazi ponudu">
+            <button class="btn btn-dark col-4 col-md-3" type="submit">Pretrazi</button>
+          </form>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+            Pocetna
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="ponuda.html">
+            Ponuda
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galerija.html">
+            Galerija
+          </a>
+          </li>
+          <li class="nav-item dropdown">
+            <span class="navbar-text dropdown-toggle" data-toggle="dropdown" role="button">Lokali</span>
+            <ul class="dropdown-menu text-center">
+              <li class="dropdown-item dropdown-header">
+                Berane
+              </li>
+              <li class="dropdown-item">
+                <a href="lokali.html">
+                Berankrs
+              </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kontakt.html">
+            Kontakt
+          </a>
+            <span class="caret"></span>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- main content -->
+
+    <div class="jumbotron">
+      <h1>Ponuda</h1>
+      <p>
+        Ovde mozete videti nasu ponudu. Lorem ipsum dolores imet omnia mea mekum porto vs braga
+      </p>
+    </div>
+
+    <div class="table-responsive" id="ponuda">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">
+              #
+            </th>
+            <td scope="col">
+              Artikal
+            </td>
+            <td scope="col">
+              Paket 1
+            </td>
+            <td scope="col">
+              Paket 2
+            </td>
+            <td scope="col">
+              Cena
+            </td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="clickable-row" data-href="#1">
+            <th scope="row">
+              1
+            </th>
+            <td>
+              Proizvod 1
+            </td>
+            <td>
+              <img src="img/notok.png" class="ok" />
+            </td>
+            <td>
+              <img src="img/ok.png" class="ok" />
+            </td>
+            <td>
+              SUPER CENA!
+              <span class="badge badge-success">500</span>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-href="#2">
+            <th scope="row">
+              2
+            </th>
+            <td>
+              Proizvod 2
+            </td>
+            <td>
+              <img src="img/notok.png" class="ok" />
+            </td>
+            <td>
+              <img src="img/ok.png" class="ok" />
+            </td>
+            <td>
+              SUPER CENA!
+              <span class="badge badge-success">79</span>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-href="#3">
+            <th scope="row">
+              3
+            </th>
+            <td>
+              Proizvod 3
+            </td>
+            <td>
+              <img src="img/notok.png" class="ok" />
+            </td>
+            <td>
+              <img src="img/ok.png" class="ok" />
+            </td>
+            <td>
+              losa cena
+              <span class="badge badge-warning">7500</span>
+            </td>
+          </tr>
+          <tr class="clickable-row table-primary" data-href="#4">
+            <th scope="row">
+              4
+            </th>
+            <td>
+              Proizvod 4
+            </td>
+            <td>
+              <img src="img/ok.png" class="ok" />
+            </td>
+
+            <td>
+              <img src="img/notok.png" class="ok" />
+            </td>
+            <td>
+              PREPORUKA PRODAVCA !
+              <span class="badge badge-success">399
+                <span class="align-text-top">99</span>
+              </span>
+            </td>
+          </tr>
+          <tr class="clickable-row" data-href="#5">
+            <th scope="row">
+              5
+            </th>
+            <td>
+              Proizvod 5
+            </td>
+            <td>
+              <img src="img/notok.png" class="ok" />
+            </td>
+            <td>
+              <img src="img/notok.png" class="ok" />
+
+            </td>
+            <td>
+              Dosadna cena
+              <span class="badge badge-info">500</span>
+
+            </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <div class="card-group">
+      <div class="row">
+
+        <div class="card col-md-6 col-lg-3" id="1">
+          <div class="card-header">
+            <img class="card-img-top" src="img/galerija.jpg" />
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              Artikal 1
+              <hr /> Ima ili nema ponudu 1 i 2
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-danger" data-toggle="modal" data-target="#modal-preuzmi">Kupi odmah!</button>
+          </div>
+        </div>
+        <div class="card col-md-6 col-lg-3" id="2">
+          <div class="card-header">
+            <img class="card-img-top" src="img/galerija2.jpg" />
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              Artikal 2
+              <hr /> Ima ili nema ponudu 1 i 2
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-warning" data-toggle="modal" data-target="#modal-naruci">Naruci odmah</button>
+          </div>
+        </div>
+        <div class="card col-md-6 col-lg-3" id="3">
+          <div class="card-header">
+            <img class="card-img-top" src="img/galerija3.jpg" />
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              Artikal 3
+              <hr /> Ima ili nema ponudu 1 i 2
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-warning" data-toggle="modal" data-target="#modal-naruci">Naruci odmah</button>
+          </div>
+        </div>
+        <div class="card col-md-6 col-lg-3" id="4">
+          <div class="card-header">
+            <img class="card-img-top" src="img/galerija4.jpg" />
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              Artikal 4
+              <hr /> Ima ili nema ponudu 1 i 2
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-muted" data-toggle="modal" data-target="#modal-nema">Ponestalo</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="card col-md-6 col-lg-3 " id="5">
+          <div class="card-header">
+            <img class="card-img-top" src="img/galerija5.jpg" />
+          </div>
+          <div class="card-body">
+            <div class="card-text">
+              Artikal 5
+              <hr /> Ima ili nema ponudu 1 i 2
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success" data-toggle="modal" data-target="#modal-preuzmi">
+              Preuzmi kupljeno
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modalni prozori -->
+
+    <div class="modal fade bg-success text-light" id="modal-preuzmi">
+      <div class="modal-dialog modal-md">
+        <div class="modal-header">
+          <h4 class="modal-title">Uspeh!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          Bice vam dostavljeno na kucnu adresu
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Ok, zatvori</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bg-warning text-dark" id="modal-naruci">
+      <div class="modal-dialog modal-md">
+        <div class="modal-header">
+          <h4 class="modal-title">Uspeh!</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          Naruceno je, kad stigne lorem ipsum per aspera ad astra
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Ok, zatvori</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade bg-danger text-light" id="modal-nema">
+      <div class="modal-dialog modal-md">
+        <div class="modal-header">
+          <h4 class="modal-title">Neuspeh</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          Nema loem ipsum scio me nihil scire
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Ok, zatvori</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer border">
+    <div class="container pt-2 pr-1 text-muted">
+      Prodavnica company
+      <span class="d-none d-md-inline">insert special character for copyright here </span>&copy;
+    </div>
+
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js">
+
+
+  </script>
+  <!-- Include all compiled plugins -->
+  <script src="js/bootstrap.min.js">
+
+
+  </script>
+  <script>
+    // iz dokumentacije za clickable-row
+
+    $(function($) {
+      $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+      });
+    });
+
+
+    // za skrolovanje linkom
+
+    $('a[href*=#]').click(function(event) {
+
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+
+      //prevent default
+
+      //return false;
+    });
+
+    $('[data-href*=#]').click(function(event) {
+
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'data-href')).offset().top
+      }, 500);
+
+      //prevent default
+
+      //return false;
+    });
+
+  </script>
+</body>
+
+</html>

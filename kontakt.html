@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Prodavnica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* iz dokumentacije za .fixed-top : dodajemo 70px padding na body */
+
+    body {
+      padding-top: 70px;
+    }
+
+    .main-presentation {
+      background-image: url(img/main.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 576px;
+    }
+
+    .ok {
+      width: 20px;
+      height: 20px;
+    }
+
+    footer {
+      height: 50px;
+    }
+
+    #carousel_1>div>div>img {
+      width: auto;
+      height: 620px;
+    }
+
+    .card-body>img {
+      height: 221px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar bg-dark navbar-dark fixed-top navbar-expand-md">
+    <!-- navbar -->
+    <div class="container">
+      <a class="nav-link navbar-brand" href="index.html">Brend prodavnice</a>
+
+      <button class="navbar-toggler" data-target="#navbar" data-toggle="collapse" role="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse collapse justify-content-end container" id="navbar">
+
+        <ul class="nav navbar-nav text-center">
+
+          <form class="form-inline d-md-none d-lg-inline mt-1 mt-md-0" action="ponuda.html">
+            <input class="form-control col-8 col-md-9" placeholder="Pretrazi ponudu">
+            <button class="btn btn-dark col-4 col-md-3" type="submit">Pretrazi</button>
+          </form>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+            Pocetna
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ponuda.html">
+            Ponuda
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galerija.html">
+            Galerija
+          </a>
+          </li>
+          <li class="nav-item dropdown">
+            <span class="navbar-text dropdown-toggle" data-toggle="dropdown" role="button">Lokali</span>
+            <ul class="dropdown-menu text-center">
+              <li class="dropdown-item dropdown-header">
+                Berane
+              </li>
+              <li class="dropdown-item">
+                <a href="lokali.html">
+                Berankrs
+              </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="kontakt.html">
+              Kontakt
+            </a>
+            <span class="caret"></span>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- main content -->
+
+    <div class="container">
+      <h1>Tu smo za tebe kao opsesivno kompulsivna devojka</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-danger mb-5" data-toggle="collapse" data-target="#komentar-forma">
+        Ostavi komentar
+      </button>
+    </div>
+    <div class="form-group collapse" id="komentar-forma">
+      <form>
+
+        <label for="ime">Ime i prezime:</label>
+        <input type="text" id="ime" class="form-control" placeholder="Unesite vase ime i prezime" required />
+        <label for="komentar">Vas komentar:</label>
+        <textarea type="text" id="komentar" class="form-control" placeholder="Unesite vas komentar" required></textarea>
+        <input type="submit" class="btn btn-default mt-1" value="Ok, postavi komentar!" />
+
+      </form>
+    </div>
+
+  </div>
+
+  <footer class="footer border">
+    <div class="container pt-2 pr-1 text-muted">
+      Prodavnica company
+      <span class="d-none d-md-inline">insert special character for copyright here </span>&copy;
+    </div>
+
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js">
+
+
+  </script>
+  <!-- Include all compiled plugins -->
+  <script src="js/bootstrap.min.js">
+
+
+  </script>
+  <script>
+    // za skrolovanje linkom
+
+    $('a[href*=#]').click(function(event) {
+
+      $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+
+      //prevent default
+
+      // return false;
+    });
+
+    // iz dokumentacije za clickable-row
+
+    $(function($) {
+      $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+      });
+    });
+
+  </script>
+</body>
+
+</html>
