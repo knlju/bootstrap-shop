@@ -1,0 +1,22 @@
+/* iz dokumentacije za .fixed-top : dodajemo 70px padding na body */
+
+body {
+    padding-top: 70px;
+}
+
+.main-presentation {
+    background-image: url(../img/main.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 576px;
+}
+
+.ok {
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    height: 50px;
+}
